@@ -3,9 +3,15 @@ from .models import *
 
 
 class CategoriesSerializer(serializers.ModelSerializer):
+    categories_endpoint = 'api/meals/categories/'
     class Meta:
         model = Categories
-        fields = '__all__'
+
+    def to_representation(self, instance):
+        representation = dict()
+        representation['name'] = instance.name
+        representation['url'] = self.categories_endpoint + str(instance.id)
+        return representation
 
 
 class IngredientSerializer(serializers.ModelSerializer):
@@ -21,6 +27,7 @@ class IngredientSerializer(serializers.ModelSerializer):
 
 
 class MealsSerializer(serializers.ModelSerializer):
+    app_endpoint = 'api/meals/'
     class Meta:
         model = Meals
 
@@ -28,7 +35,9 @@ class MealsSerializer(serializers.ModelSerializer):
         representation = dict()
         representation['id'] = instance.id
         representation['name'] = instance.name
+        representation['servings'] = instance.servings
         representation['category'] = instance.category_id.name
+        representation['url'] = self.app_endpoint + str(instance.id)
         return representation
 
 
