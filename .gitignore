@@ -1,6 +1,9 @@
 # Environment
 env/
 
+# Deploy settings
+app/.env
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

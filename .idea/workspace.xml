@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e59f5e3-d120-4e4b-bfff-e30dd589d30b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/shoplistapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/shoplistapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/shoplistapp/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/shoplistapp/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/shoplistapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/shoplistapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/shoplistapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/shoplistapp/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="5e59f5e3-d120-4e4b-bfff-e30dd589d30b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
