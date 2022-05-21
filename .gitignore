@@ -2,7 +2,7 @@
 env/
 
 # Deploy settings
-app/.env
+app/.env.old
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

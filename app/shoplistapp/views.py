@@ -5,16 +5,25 @@ from django.http import Http404
 
 
 class CategoriesList(generics.ListAPIView):
+    """
+    Wyświetl kategorie posiłków
+    """
     queryset = Categories.objects.all()
     serializer_class = CategoriesSerializer
 
 
 class MealsList(generics.ListAPIView):
+    """
+    Wyświetl wszystkie posiłki
+    """
     queryset = Meals.objects.all()
     serializer_class = MealsSerializer
 
 
 class MealsByCategory(generics.ListAPIView):
+    """
+    Wyświetl posiłki z podziałem na kategorię
+    """
     serializer_class = MealsSerializer
     
     def get_queryset(self):
@@ -28,6 +37,9 @@ class MealsByCategory(generics.ListAPIView):
 
 
 class MealDetail(generics.RetrieveAPIView):
+    """
+    Wyświetl szczegóły posiłku: przepis, listę składników
+    """
     lookup_field = 'id'
     serializer_class = MealSerializer
 

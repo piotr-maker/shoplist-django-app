@@ -7,21 +7,21 @@ from ..models import *
 def test_create_meal():
     category = Categories.objects.create(name="diner")
     category.save()
-    meal = Meals.objects.create(name="chicken soup", recipe="recipe", servings=1, category_id=category)
+    meal = Meals.objects.create(name="chicken soup", recipe="recipe", servings=1, category=category)
     meal.save()
 
     unit = Units.objects.create(name="piece")
     unit.save()
     ingredient = Ingredients.objects.create(name="carrot")
     ingredient.save()
-    mi = MealsIngredients.objects.create(meal_id=meal, unit_id=unit, ingredient_id=ingredient, quantity=2)
+    mi = MealsIngredients.objects.create(meal=meal, unit=unit, ingredient=ingredient, quantity=2)
     mi.save()
 
     unit = Units.objects.create(name="clove")
     unit.save()
     ingredient = Ingredients.objects.create(name="garlic")
     ingredient.save()
-    mi = MealsIngredients.objects.create(meal_id=meal, unit_id=unit, ingredient_id=ingredient, quantity=6)
+    mi = MealsIngredients.objects.create(meal=meal, unit=unit, ingredient=ingredient, quantity=6)
     mi.save()
 
     assert len(Categories.objects.all()) == 1

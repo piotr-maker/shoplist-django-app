@@ -4,3 +4,5 @@ pytest-django
 djangorestframework
 django-cors-headers
 python-decouple
+pyyaml
+uritemplate

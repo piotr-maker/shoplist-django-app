@@ -1,0 +1,144 @@
+openapi: 3.0.2
+info:
+  title: ''
+  version: ''
+paths:
+  /api/meals:
+    get:
+      operationId: listMeals
+      description: "Wy\u015Bwietl wszystkie posi\u0142ki"
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Meals'
+          description: ''
+      tags:
+      - api
+  /api/meals/{id}:
+    get:
+      operationId: retrieveMeal
+      description: "Wy\u015Bwietl szczeg\xF3\u0142y posi\u0142ku: przepis, list\u0119\
+        \ sk\u0142adnik\xF3w"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Meal'
+          description: ''
+      tags:
+      - api
+  /api/meals/categories:
+    get:
+      operationId: listCategories
+      description: "Wy\u015Bwietl kategorie posi\u0142k\xF3w"
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Categories'
+          description: ''
+      tags:
+      - api
+  /api/meals/categories/{category_id}:
+    get:
+      operationId: retrieveMeals
+      description: "Wy\u015Bwietl posi\u0142ki z podzia\u0142em na kategori\u0119"
+      parameters:
+      - name: category_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Meals'
+          description: ''
+      tags:
+      - api
+components:
+  schemas:
+    Meals:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 100
+        servings:
+          type: integer
+        category:
+          type: string
+          readOnly: true
+        url:
+          type: string
+          readOnly: true
+      required:
+      - name
+      - servings
+    Meal:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 100
+        servings:
+          type: integer
+        recipe:
+          type: string
+        ingredients:
+          type: array
+          items:
+            type: object
+            properties:
+              ingredient:
+                type: string
+                readOnly: true
+              quantity:
+                type: integer
+              unit:
+                type: string
+                readOnly: true
+            required:
+            - quantity
+      required:
+      - name
+      - servings
+      - recipe
+      - ingredients
+    Categories:
+      type: object
+      properties:
+        name:
+          type: string
+          maxLength: 20
+        url:
+          type: string
+          readOnly: true
+      required:
+      - name
