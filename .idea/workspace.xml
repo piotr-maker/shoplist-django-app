@@ -4,14 +4,10 @@
     <list default="true" id="5e59f5e3-d120-4e4b-bfff-e30dd589d30b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/shoplist/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/shoplist/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/shoplistapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/shoplistapp/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/shoplistapp/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/shoplistapp/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/shoplistapp/tests/test_delete_meal.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/shoplistapp/tests/test_delete_meal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/shoplistapp/tests/test_delete_meals_ingredients.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/shoplistapp/tests/test_delete_meals_ingredients.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/shoplistapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/shoplistapp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/shoplistapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/shoplistapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/docs/api.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/docs/api.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +46,7 @@
       <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.tests">
+  <component name="RunManager" selected="Python.generateschema">
     <configuration name="generateschema" type="PythonConfigurationType" factoryName="Python">
       <module name="projekt" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -152,10 +148,10 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.migrate" />
-      <item itemvalue="Python.runserver" />
       <item itemvalue="Python.generateschema" />
       <item itemvalue="Python.makemigrations" />
+      <item itemvalue="Python.migrate" />
+      <item itemvalue="Python.runserver" />
       <item itemvalue="Python tests.tests" />
     </list>
   </component>

@@ -24,6 +24,7 @@ class IngredientSerializer(serializers.ModelSerializer):
     class Meta:
         model = MealsIngredients
         fields = ['ingredient', 'quantity', 'unit']
+        read_only_fields = ['ingredient', 'quantity', 'unit']
 
 
 class MealsSerializer(serializers.ModelSerializer):

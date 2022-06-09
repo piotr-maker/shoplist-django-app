@@ -11,6 +11,7 @@ urlpatterns = [
         extra_context={'schema_url':'openapi-schema'}
     ), name='swagger-ui'),
     path('meals', views.MealsList.as_view()),
+    path('meals/generate', views.IngredientList.as_view()),
     path('meals/<int:id>', views.MealDetail.as_view()),
     path('meals/categories', views.CategoriesList.as_view()),
     path('meals/categories/<int:category_id>', views.MealsByCategory.as_view()),
