@@ -1,7 +1,13 @@
 openapi: 3.0.2
 info:
-  title: ''
-  version: ''
+  title: 'Shoplist app'
+  version: '1.0.0'
+servers:
+  - url: "http://localhost:8000/api"
+    description: "Local server"
+tags:
+- name: "Meal"
+  description: "Access to meals"
 paths:
   /api/meals:
     get:
@@ -18,8 +24,8 @@ paths:
                   $ref: '#/components/schemas/Meals'
           description: ''
       tags:
-      - api
-  /api/meals/{id}:
+      - "Meal"
+  /meals/{id}:
     get:
       operationId: retrieveMeal
       description: "Wy\u015Bwietl szczeg\xF3\u0142y posi\u0142ku: przepis, list\u0119\
@@ -39,8 +45,8 @@ paths:
                 $ref: '#/components/schemas/Meal'
           description: ''
       tags:
-      - api
-  /api/meals/categories:
+      - "Meal"
+  /meals/categories:
     get:
       operationId: listCategories
       description: "Wy\u015Bwietl kategorie posi\u0142k\xF3w"
@@ -55,8 +61,8 @@ paths:
                   $ref: '#/components/schemas/Categories'
           description: ''
       tags:
-      - api
-  /api/meals/categories/{category_id}:
+      - "Meal"
+  /meals/categories/{category_id}:
     get:
       operationId: retrieveMeals
       description: "Wy\u015Bwietl posi\u0142ki z podzia\u0142em na kategori\u0119"
@@ -75,9 +81,36 @@ paths:
                 $ref: '#/components/schemas/Meals'
           description: ''
       tags:
-      - api
+      - "Meal"
+  /meals/generate:
+    get:
+      operationId: createIngredient
+      description: 'Generuj listę zakupów'
+      parameters: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Ingredient'
+          description: ''
+      tags:
+      - "Meal"
+
 components:
   schemas:
+    Ingredient:
+      type: object
+      properties:
+        ingredient:
+          type: string
+        quantity:
+          type: integer
+        unit:
+          type: string
+  
     Meals:
       type: object
       properties:
@@ -131,6 +164,7 @@ components:
       - servings
       - recipe
       - ingredients
+
     Categories:
       type: object
       properties:
