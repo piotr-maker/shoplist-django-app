@@ -3,13 +3,14 @@ info:
   title: 'Shoplist app'
   version: '1.0.0'
 servers:
+  - url: "https://itsolutions.hopto.org/api"
   - url: "http://localhost:8000/api"
     description: "Local server"
 tags:
 - name: "Meal"
   description: "Access to meals"
 paths:
-  /api/meals:
+  /meals:
     get:
       operationId: listMeals
       description: "Wy\u015Bwietl wszystkie posi\u0142ki"
